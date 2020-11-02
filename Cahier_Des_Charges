@@ -1,0 +1,24 @@
+Sujet: Pere noel
+Le père Noel a décidé de mettre en oeuvre un système d’information permettant de faciliter la collecte des souhaits des enfants ainsi que la distribution des jouets. 
+Pour cela il faut recencer les magasins dans les différentes villes du territoire.
+Les villes comme les magasins sont caractérisés par un nom. 
+Les jouets peuvent être distribués par plusieurs magasins.
+Les jouets portent un nom (par exemple « Sherlock Holmes »), appartiennent à une marque (« Parkeur ») et sont recommandés pour les enfants à partir d’un certain âge (8 ans). 
+Un compte du nombre d’articles (par exemple le nombre de boites de « Sherlock Holmes ») est représenté pour chaque magasin. 
+D’autre part chaque jouet peut être caractérisé par plusieurs étiquettes (tags). 
+Par exemple « jeux de société », « jeux d’adresse », « jeux d’éveil ». 
+Les tags sont organisés de façon hiérarchique : un jeux de société est un jouet d’intérieur, un vélo est un jeux d’extérieur.
+L’idée est de permettre à l’utilisateur de pouvoir faire des requêtes de plus en plus précises (commencer par « jouet d’intérieur » puis de choisir parmi les tags correspondant à des jouets d’intérieur). 
+D’autres hiérarchies peuvent être envisagées … En particulier des hiérarchies avec plus de niveaux. 
+D’autre part plusieurs hiérarchies peuvent être utilisées.
+Chaque enfant est représenté par son nom, son prénom ainsi que son âge. 
+Un enfant habite une ville et ne peut fréquenter que les magasins de sa ville. 
+D’autre part il doit faire une liste de souhaits en fonction de ses préférences (en terme de tags) et de son âge.
+
+Tables:
+- Jouets(nom,marque,age)
+- Magasins(jouet,nombre,ville)
+- Villes()
+- Enfants(nom, prenom, age)
+
+
