@@ -1,47 +1,6 @@
-
-CREATE TABLE IF NOT EXISTS `villes_france_free` (
-  `ville_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-  `ville_departement` varchar(3) DEFAULT NULL,
-  `ville_slug` varchar(255) DEFAULT NULL,
-  `ville_nom` varchar(45) DEFAULT NULL,
-  `ville_nom_simple` varchar(45) DEFAULT NULL,
-  `ville_nom_reel` varchar(45) DEFAULT NULL,
-  `ville_nom_soundex` varchar(20) DEFAULT NULL,
-  `ville_nom_metaphone` varchar(22) DEFAULT NULL,
-  `ville_code_postal` varchar(255) DEFAULT NULL,
-  `ville_commune` varchar(3) DEFAULT NULL,
-  `ville_code_commune` varchar(5) NOT NULL,
-  `ville_arrondissement` smallint(3) unsigned DEFAULT NULL,
-  `ville_canton` varchar(4) DEFAULT NULL,
-  `ville_amdi` smallint(5) unsigned DEFAULT NULL,
-  `ville_population_2010` mediumint(11) unsigned DEFAULT NULL,
-  `ville_population_1999` mediumint(11) unsigned DEFAULT NULL,
-  `ville_population_2012` mediumint(10) unsigned DEFAULT NULL COMMENT 'approximatif',
-  `ville_densite_2010` int(11) DEFAULT NULL,
-  `ville_surface` float DEFAULT NULL,
-  `ville_longitude_deg` float DEFAULT NULL,
-  `ville_latitude_deg` float DEFAULT NULL,
-  `ville_longitude_grd` varchar(9) DEFAULT NULL,
-  `ville_latitude_grd` varchar(8) DEFAULT NULL,
-  `ville_longitude_dms` varchar(9) DEFAULT NULL,
-  `ville_latitude_dms` varchar(8) DEFAULT NULL,
-  `ville_zmin` mediumint(4) DEFAULT NULL,
-  `ville_zmax` mediumint(4) DEFAULT NULL,
-  PRIMARY KEY (`ville_id`),
-  UNIQUE KEY `ville_code_commune_2` (`ville_code_commune`),
-  UNIQUE KEY `ville_slug` (`ville_slug`),
-  KEY `ville_departement` (`ville_departement`),
-  KEY `ville_nom` (`ville_nom`),
-  KEY `ville_nom_reel` (`ville_nom_reel`),
-  KEY `ville_code_commune` (`ville_code_commune`),
-  KEY `ville_code_postal` (`ville_code_postal`),
-  KEY `ville_longitude_latitude_deg` (`ville_longitude_deg`,`ville_latitude_deg`),
-  KEY `ville_nom_soundex` (`ville_nom_soundex`),
-  KEY `ville_nom_metaphone` (`ville_nom_metaphone`),
-  KEY `ville_population_2010` (`ville_population_2010`),
-  KEY `ville_nom_simple` (`ville_nom_simple`)
-);
-INSERT INTO `villes_france_free` (`ville_id`, `ville_departement`, `ville_slug`, `ville_nom`, `ville_nom_simple`, `ville_nom_reel`, `ville_nom_soundex`, `ville_nom_metaphone`, `ville_code_postal`, `ville_commune`, `ville_code_commune`, `ville_arrondissement`, `ville_canton`, `ville_amdi`, `ville_population_2010`, `ville_population_1999`, `ville_population_2012`, `ville_densite_2010`, `ville_surface`, `ville_longitude_deg`, `ville_latitude_deg`, `ville_longitude_grd`, `ville_latitude_grd`, `ville_longitude_dms`, `ville_latitude_dms`, `ville_zmin`, `ville_zmax`) VALUES
+ 
+CREATE TABLE IF NOT EXISTS villes_france_free (ville_id mediumint(8) NOT NULL AUTO_INCREMENT,ville_departement varchar(3) DEFAULT NULL,ville_slug varchar(255) DEFAULT NULL,  ville_nom varchar(45) DEFAULT NULL,  ville_nom_simple varchar(45) DEFAULT NULL,  ville_nom_reel varchar(45) DEFAULT NULL,  ville_nom_soundex varchar(20) DEFAULT NULL,  ville_nom_metaphone varchar(22) DEFAULT NULL,  ville_code_postal varchar(255) DEFAULT NULL,  ville_commune varchar(3) DEFAULT NULL,  ville_code_commune varchar(5) NOT NULL,  ville_arrondissement smallint(3) unsigned DEFAULT NULL,  ville_canton varchar(4) DEFAULT NULL,  ville_amdi smallint(5) unsigned DEFAULT NULL,  ville_population_2010 mediumint(11) unsigned DEFAULT NULL,  ville_population_1999 mediumint(11) unsigned DEFAULT NULL,  ville_population_2012 mediumint(10) unsigned DEFAULT NULL COMMENT 'approximatif',  ville_densite_2010 int(11) DEFAULT NULL,  ville_surface float DEFAULT NULL,  ville_longitude_deg float DEFAULT NULL,  ville_latitude_deg float DEFAULT NULL,  ville_longitude_grd varchar(9) DEFAULT NULL,  ville_latitude_grd varchar(8) DEFAULT NULL,  ville_longitude_dms varchar(9) DEFAULT NULL,  ville_latitude_dms varchar(8) DEFAULT NULL,  ville_zmin mediumint(4) DEFAULT NULL, ville_zmax mediumint(4) DEFAULT NULL  );
+INSERT INTO villes_france_free (ville_id, ville_departement, ville_slug, ville_nom, ville_nom_simple, ville_nom_reel, ville_nom_soundex, ville_nom_metaphone, ville_code_postal, ville_commune, ville_code_commune, ville_arrondissement, ville_canton, ville_amdi, ville_population_2010, ville_population_1999, ville_population_2012, ville_densite_2010, ville_surface, ville_longitude_deg, ville_latitude_deg, ville_longitude_grd, ville_latitude_grd, ville_longitude_dms, ville_latitude_dms, ville_zmin, ville_zmax) VALUES
 (10879, '29', 'loperhet', 'LOPERHET', 'loperhet', 'Loperhet', 'L163', 'LPRHT', '29470', '140', '29140', 1, '12', 6, 3602, 3465, 3600, 177, 20.31, -4.3, 48.3833, '-7380', '53750', '-41819', '482229', 0, 162),
 (10880, '29', 'confort-meilars', 'CONFORT-MEILARS', 'confort meilars', 'Confort-Meilars', 'C51635462', 'KNFRTMLRS', '29790', '145', '29145', 4, '33', 6, 903, 748, 800, 61, 14.68, -4.43333, 48.05, '-7514', '53389', '-42535', '480301', 5, 96),
 (10881, '29', 'daoulas', 'DAOULAS', 'daoulas', 'Daoulas', 'D420', 'TLS', '29460', '043', '29043', 1, '12', 5, 1782, 1792, 1800, 328, 5.42, -4.25, 48.3667, '-7329', '53734', '-41535', '482139', 0, 97);
@@ -274,7 +233,7 @@ INSERT INTO `villes_france_free` (`ville_id`, `ville_departement`, `ville_slug`,
 (11108, '29', 'plouzevede', 'PLOUZEVEDE', 'plouzevede', 'Plouzévédé', 'P4213', 'PLSFT', '29440', '213', '29213', 3, '31', 5, 1684, 1353, 1600, 90, 18.51, -4.11667, 48.6, '-7165', '53994', '-40645', '483542', 40, 106),
 (11109, '29', 'benodet', 'BENODET', 'benodet', 'Bénodet', 'B530', 'BNTT', '29950', '006', '29006', 4, '15', 6, 3331, 2763, 3200, 316, 10.53, -4.11667, 47.8667, '-7166', '53196', '-40646', '475236', 0, 59),
 (11110, '29', 'lanarvily', 'LANARVILY', 'lanarvily', 'Lanarvily', 'L5614', 'LNRFL', '29260', '100', '29100', 1, '24', 6, 419, 266, 400, 70, 5.92, -4.38333, 48.55, '-7472', '53947', '-42318', '483307', 18, 71);
-INSERT INTO `villes_france_free` (`ville_id`, `ville_departement`, `ville_slug`, `ville_nom`, `ville_nom_simple`, `ville_nom_reel`, `ville_nom_soundex`, `ville_nom_metaphone`, `ville_code_postal`, `ville_commune`, `ville_code_commune`, `ville_arrondissement`, `ville_canton`, `ville_amdi`, `ville_population_2010`, `ville_population_1999`, `ville_population_2012`, `ville_densite_2010`, `ville_surface`, `ville_longitude_deg`, `ville_latitude_deg`, `ville_longitude_grd`, `ville_latitude_grd`, `ville_longitude_dms`, `ville_latitude_dms`, `ville_zmin`, `ville_zmax`) VALUES
+INSERT INTO villes_france_free (ville_id, ville_departement, ville_slug, ville_nom, ville_nom_simple, ville_nom_reel, ville_nom_soundex, ville_nom_metaphone, ville_code_postal, ville_commune, ville_code_commune, ville_arrondissement, ville_canton, ville_amdi, ville_population_2010, ville_population_1999, ville_population_2012, ville_densite_2010, ville_surface, ville_longitude_deg, ville_latitude_deg, ville_longitude_grd, ville_latitude_grd, ville_longitude_dms, ville_latitude_dms, ville_zmin, ville_zmax) VALUES
 (11111, '29', 'treguennec', 'TREGUENNEC', 'treguennec', 'Tréguennec', 'T6252', 'TRKNK', '29720', '292', '29292', 4, '34', 6, 340, 342, 300, 35, 9.61, -4.33333, 47.8833, '-7411', '53213', '-42000', '475330', 0, 53),
 (11112, '29', 'esquibien', 'ESQUIBIEN', 'esquibien', 'Esquibien', 'E215', 'ESKBN', '29770', '052', '29052', 4, '33', 6, 1605, 1614, 1600, 104, 15.42, -4.56667, 48.0167, '-7666', '53361', '-43346', '480130', 0, 79),
 (11113, '29', 'plogoff', 'PLOGOFF', 'plogoff', 'Plogoff', 'P421', 'PLKF', '29770', '168', '29168', 4, '33', 6, 1335, 1564, 1400, 113, 11.73, -4.66667, 48.0333, '-7780', '53374', '-43957', '480212', 0, 80),
@@ -324,5 +283,6 @@ INSERT INTO `villes_france_free` (`ville_id`, `ville_departement`, `ville_slug`,
 (11157, '29', 'logonna-daoulas', 'LOGONNA-DAOULAS', 'logonna daoulas', 'Logonna-Daoulas', 'L25342', 'LKNTLS', '29460', '137', '29137', 1, '12', 6, 2093, 1582, 2100, 172, 12.14, -4.3, 48.3167, '-7372', '53690', '-41755', '481914', 0, 77),
 (11158, '29', 'martyre', 'LA MARTYRE', 'la martyre', 'La Martyre', 'L5636', 'LMRTR', '29800', '144', '29144', 1, '28', 6, 763, 596, 800, 42, 18.01, -4.16667, 48.45, '-7217', '53832', '-40933', '482654', 49, 191),
 (11159, '29', 'poullaouen', 'POULLAOUEN', 'poullaouen', 'Poullaouen', 'P450', 'PLN', '29246', '227', '29227', 2, '07', 6, 1400, 1502, 1400, 19, 71.36, -3.65, 48.3333, '-6643', '53711', '-33833', '482024', 69, 218),
-(11160, '29', 'ploudalmezeau', 'PLOUDALMEZEAU', 'ploudalmezeau', 'Ploudalmézeau', 'P43452', 'PLTLMS', '29830', '178', '29178', 1, '27', 5, 6301, 5009, 6100, 271, 23.18, -4.65, 48.5333, '-7771', '53934', '-43927', '483225', 0, 86),
-
+(11160, '29', 'ploudalmezeau', 'PLOUDALMEZEAU', 'ploudalmezeau', 'Ploudalmézeau', 'P43452', 'PLTLMS', '29830', '178', '29178', 1, '27', 5, 6301, 5009, 6100, 271, 23.18, -4.65, 48.5333, '-7771', '53934', '-43927', '483225', 0, 86);
+ 
+select * from villes_france_free;
